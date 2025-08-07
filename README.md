@@ -1,52 +1,90 @@
-# Multi-Tier-Enterprise-Network
-# Network Topology: Partial Mesh
-The decision to opt for a partial mesh topology over other network topologies is driven
-by several practical considerations tailored to organizational needs. The partial mesh
-topology was chosen for its balance between redundancy, scalability, and cost-
-effectiveness. By selectively establishing direct connections between critical sites, such
-as the main site, regional office, manufacturing facility, distribution center, and remote
-site, we ensure efficient and reliable communication pathways where they are most
-essential.
-This topology allows us to prioritize direct connectivity where it is most needed,
-facilitating seamless data exchange, collaboration, and resource sharing between key
-sites while avoiding unnecessary complexities and overhead associated with a full mesh
-topology.
-Additionally, the partial mesh design offers flexibility for future expansion, enabling the
-network to grow and adapt to evolving requirements without compromising performance
-or manageability. Overall, the partial mesh topology aligns closely with our
-organization's connectivity needs, providing a robust and scalable network infrastructure
-tailored to our specific operational demands.
-# Topology Structure:
-The Main Site has direct connections to the Regional Office, Manufacturing Facility, and
-Distribution Center.
-The Regional Office has direct connections to the Main Site, Distribution Center, and
-Remote Site.
-The Manufacturing Facility has a direct connection to the Main Site and Distribution
-Center.
-The Distribution Center has direct connections to the Main Site, Regional Office, and
-Remote Site.
-The Remote Site has direct connections to the Regional Office and Distribution Center.
-This topology ensures that each site has direct communication links to the necessary
-sites as per requirements.
-# Naming Conventions
-• Routers – Site + (RouterID)
-Multi Layer Switches – Site + Multi Layer Switch (ML-SwithID)
-• Switch – Department (SwitchID)
-• PC – Department + Site+PCID
-• Access Point - Department+Site+Access Point
-SSID – Department+Site+AP
-Password - “AP-cs461”
-• Laptop - Department+Site+LaptopID
-• Printer - Department+Site+Printer
-# Technologies Implemented
-1. VLAN: Virtual Local Area Network to divide each department with in a site.
-2. Inter-VLANing to enable communication between different VLANs (different departments).
-3. Subnetting: Partitioning network to smaller networks.
-4. OSPF Routing: Open Shortest Path First Routing on routers to route traffic.
-5. DHCP: Dynamic Host Configuration Protocol hosted on a server to dynamically allocate IP
-address to all end devices.
-6. DNS: Domain Name System that translate domain name to IP address.
-7. HTTPS: Hypertext Transfer Protocol Secure used to access the simple hosted website.
-8. NAT (PAT): Network Address Translation (Port Address Translation) used to assigne different
-public IP address to end devices when accessing external network.
-9. ACL: Access Control List a list implements to permit communication and translation by PAT
+# Multi-Tier Enterprise Network
+
+A multi-tiered enterprise network simulation implemented using Cisco Packet Tracer. This project showcases a scalable partial mesh topology across multiple sites with full network functionality using VLANs, OSPF, NAT, ACL, DHCP, DNS, and more.
+
+---
+
+## 🗺️ Network Topology: Partial Mesh
+
+The network is designed using a **partial mesh topology** to balance redundancy, scalability, and cost-effectiveness. Direct connections between essential sites improve communication efficiency without the complexity of a full mesh.
+
+### 🌐 Connected Sites:
+
+- **Main Site** ↔ Regional Office, Manufacturing Facility, Distribution Center  
+- **Regional Office** ↔ Main Site, Distribution Center, Remote Site  
+- **Manufacturing Facility** ↔ Main Site, Distribution Center  
+- **Distribution Center** ↔ Main Site, Regional Office, Remote Site  
+- **Remote Site** ↔ Regional Office, Distribution Center  
+
+This design allows robust, efficient communication between critical operational nodes while remaining adaptable for future scaling.
+
+---
+
+## 🏷️ Naming Conventions
+
+| Device Type          | Format Example                     |
+|----------------------|-------------------------------------|
+| Router               | `Site+RouterID`                     |
+| Multi-Layer Switch   | `Site+MLSwitchID`                   |
+| Access Switch        | `Department+SwitchID`              |
+| PC                   | `Department+Site+PCID`             |
+| Laptop               | `Department+Site+LaptopID`         |
+| Printer              | `Department+Site+PrinterID`        |
+| Access Point         | `Department+Site+AP`               |
+| SSID                 | `Department+Site+AP`               |
+| WiFi Password        | `AP-cs461`                         |
+
+---
+
+## 🛠️ Technologies Implemented
+
+1. **VLAN** – Logical separation of departments.
+2. **Inter-VLAN Routing** – Communication between different VLANs.
+3. **Subnetting** – Logical subdivision of IP networks.
+4. **OSPF Routing** – Dynamic routing between routers.
+5. **DHCP** – Automated IP assignment to end devices.
+6. **DNS** – Resolving domain names to IP addresses.
+7. **HTTPS** – Secure web access to internal services.
+8. **NAT (PAT)** – Public IP translation for external access.
+9. **ACL** – Security rules for traffic control and NAT permissions.
+
+---
+
+## 📁 Project Files
+
+| File Name | Description |
+|----------|-------------|
+| `FullyDoneNoNATandACL.pkt` | Final working version without NAT and ACL implemented |
+| `NATandACLonMainSiteRouter.pkt` | NAT & ACL configured on the Main Site router |
+| `Multi Tier Enterprise Network Documentation.pdf` | Full project documentation and topology explanation |
+| `README.md` | Project overview and documentation (this file) |
+
+---
+
+## 📷 Preview
+
+![Network Topology Diagram](./f4ede69b-a8fd-4c19-a23d-061a286da57f.png)
+
+---
+
+## 🚀 How to Open the Project
+
+1. Download **Cisco Packet Tracer** from [Cisco NetAcad](https://www.netacad.com/)
+2. Clone or download this repository.
+3. Open `.pkt` files inside Packet Tracer.
+4. Use simulation mode to test OSPF routing, NAT, ACL, and device connectivity.
+
+---
+
+## 👨‍💻 Author
+
+**GitHub:** [@mikyge2](https://github.com/mikyge2)
+
+For educational, research, and lab simulation purposes.
+
+---
+
+## 📜 License
+
+This project is open-source and free to use for learning and demonstration purposes.
+
