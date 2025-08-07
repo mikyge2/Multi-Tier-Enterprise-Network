@@ -59,11 +59,6 @@ This design allows robust, efficient communication between critical operational 
 | `Multi Tier Enterprise Network Documentation.pdf` | Full project documentation and topology explanation |
 | `README.md` | Project overview and documentation (this file) |
 
----
-
-## 📷 Preview
-
-![Network Topology Diagram](./f4ede69b-a8fd-4c19-a23d-061a286da57f.png)
 
 ---
 
